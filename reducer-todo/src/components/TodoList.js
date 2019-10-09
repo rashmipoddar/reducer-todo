@@ -5,13 +5,15 @@ import TodoItem from './TodoItem';
 import TodoForm from './TodoForm';
 
 const TodoList = () => {
-  const [ state, dispatch ] = useReducer(reducer, initialState);
+  const [ currentState, dispatch ] = useReducer(reducer, initialState);
+  // dispatch is the action function
   
   return (
     <div>
-      {state.map(todo => {
+      {/* {console.log('State from TodoList', currentState)} */}
+      {currentState.map(todo => {
         return (
-          <TodoItem key={todo.id} todo={todo}/>
+          <TodoItem key={todo.id} todo={todo} dispatch={dispatch} />
         )
       })}
       <TodoForm dispatch={dispatch} />
