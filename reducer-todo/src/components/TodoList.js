@@ -7,7 +7,8 @@ import TodoForm from './TodoForm';
 const TodoList = () => {
   const [ currentState, dispatch ] = useReducer(reducer, initialState);
   // dispatch is the action function
-  
+  // currentState is the initial state after that it is the state that is returned when dispatch function is called.
+
   return (
     <div>
       {/* {console.log('State from TodoList', currentState)} */}

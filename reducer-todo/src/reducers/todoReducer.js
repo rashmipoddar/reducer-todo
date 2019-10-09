@@ -16,6 +16,8 @@ export const initialState = [{
 //   ]
 // }
 
+
+// This state is what is passed in the useReducer hook as the second argument in components/TodoList.js
 export const reducer = (state, action) => {
   switch(action.type) {
     case 'ADD_TODO' : 

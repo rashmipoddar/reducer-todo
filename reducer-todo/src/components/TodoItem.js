@@ -5,6 +5,7 @@ const TodoItem = (props) => {
     event.preventDefault();
     // console.log(props.todo.id);
     props.dispatch({type: 'TOGGLE_COMPLETED', payload: props.todo.id});
+    // dispatch calls the reducer function passing in the action. 
   }
 
   return (
